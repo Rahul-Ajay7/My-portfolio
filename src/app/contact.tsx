@@ -6,27 +6,34 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    
-    const form = e.currentTarget;
+  const form = e.currentTarget;
 
-    try {
-      const res = await fetch('https://formspree.io/f/xeogypvl', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
-        }),
-      });
+  // Correctly extract form values with type casting
+  const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+  const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+  const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
 
-      if (res.ok) setSubmitted(true);
-    } catch (error) {
-      console.error('Form error:', error);
-    }
-  };
+  try {
+    const res = await fetch('https://formspree.io/f/xeogypvl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+  
+    if (res.ok) {
+      setSubmitted(true);
+  
+  form.reset(); 
+}
+
+  } catch (error) {
+    console.error('Form error:', error);
+  }
+};
+
 
   return (
     <section className="w-full  max-w-xl mx-auto py-16 px-4" id="contact">
@@ -61,8 +68,11 @@ export default function Contact() {
             Send Message...
           </button>
           {submitted && (
-        <p className="text-green-400 text-center">Thank you! I’ll get back to you soon.</p>)
-      }
+          <p className="text-green-400 text-center" aria-live="polite">
+            Thank you! I&apos;ll get back to you soon.
+          </p>
+        )}
+
         </form>
       
     </section>

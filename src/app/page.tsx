@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Contact from './contact';
 import Skills from './skills';
 
@@ -16,14 +17,16 @@ export default function Home() {
             <a
               href="https://github.com/Rahul-Ajay7"
               target="_blank"
-              rel="Github Link"
+              rel="noopener noreferrer"
+
               className="hover:text-green-400 transition-colors duration-250"
             >
               Github
             </a>
             <a
               href="https://www.linkedin.com/in/rahul-a-8b6849291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              rel="LinkedIn Link"
+              rel="noopener noreferrer"
+
               target="_blank"
               className="hover:text-blue-400 transition-colors duration-250"
             >
@@ -35,7 +38,7 @@ export default function Home() {
       <div className="flex items-center justify-between mb-8 px-4 pt-20">
         <h1 className="text-4xl font-bold mb-4 text-white">Hi, I'm Rahul 👋</h1>
         <div className="mt-6 md:mt-0 md:ml-10">
-          <img
+          <Image
             src="/my-photo.jpg"
             alt="My Photo"
             className="w-40 h-40 md:w-52 md:h-52 object-cover border-4 rounded-full  border-white shadow-lg"
@@ -78,7 +81,7 @@ export default function Home() {
     
        <div className="bg-red-700 hover:bg-red-600 transition-colors rounded-lg overflow-hidden shadow-md">
           <div className="flex flex-col sm:flex-row">
-           <img
+           <Image
           src="/rect.png"
           alt="Project Thumbnail"
           className="w-full sm:w-40 h-40 p-1 object-cover"
@@ -102,7 +105,7 @@ export default function Home() {
         </div>
         <div className="bg-yellow-600 hover:bg-yellow-500 transition-colors rounded-lg overflow-hidden shadow-md">
           <div className="flex flex-col sm:flex-row">
-            <img
+            <Image
               src="/calculator.jpg"
               alt="Project Thumbnail"
               className="w-full sm:w-40 h-40 p-1 object-cover"
@@ -125,7 +128,7 @@ export default function Home() {
         </div>
         <div className="bg-purple-700 hover:bg-purple-600 transition-colors rounded-lg overflow-hidden shadow-md">
           <div className="flex flex-col sm:flex-row">
-            <img
+            <Image
               src="/Form.jpg"
               alt="Project Thumbnail"
               className="w-full sm:w-40 h-40 p-1 object-cover"
