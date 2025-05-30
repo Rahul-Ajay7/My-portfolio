@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen pt-2 pb-0.5 flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-900 to-black
  px-6">
       
-      <nav className="w-full bg-black text-white px-9 py-4  flex justify-between items-center shadow-md border-b border-white fixed top-0 z-50">
+      <nav className="w-full bg-black text-white px-5 py-4  flex justify-between items-center shadow-md border-b border-white fixed top-0 z-50">
  
           <h2 className="text-2xl font-bold">Portfolio</h2>
 
