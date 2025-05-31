@@ -36,7 +36,7 @@ export default function Home() {
       </nav>
       
       <div className="flex items-center justify-between mb-8 px-4 pt-20">
-        <h1 className="text-4xl font-bold mb-4 text-white">Hi, I'm Rahul 👋</h1>
+        <h1 className="text-4xl font-bold mb-4 text-white">Hi, I&apos;m Rahul 👋</h1>
         <div className="mt-6 md:mt-0 md:ml-10">
           <Image
             src="/my-photo.jpg"
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </div>      
       <p className="text-lg text-white max-w-2xl text-center mb-8">
-        I'm a Computer Science student passionate about Full Stack Development and Machine Learning.
+        I&apos;m a Computer Science student passionate about Full Stack Development and Machine Learning.
         I build modern web apps using <strong>React</strong> and <strong>Firebase</strong>, and I love working on
         systems using <strong>Python</strong>, <strong>TensorFlow</strong> and <strong>scikit-learn</strong>.
         I am also interested in <strong>Digital Marketing</strong>.
